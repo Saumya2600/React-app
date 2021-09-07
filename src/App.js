@@ -18,7 +18,7 @@ function App() {
     if(mode==='light'){
       setMode('dark');
       showAlert("Dark Mode has been enabled",'success');
-      document.body.style.backgroundColor="#202020";
+      document.body.style.backgroundColor="rgb(58 54 54)";
       
     }else{
       setMode('light');
@@ -57,10 +57,10 @@ function App() {
       <div className="container my-3 text-center">
         <Switch>
           <Route exact path="/about">
-            <About />
+            <About mode={mode} />
           </Route>
           <Route exact path="/">
-         <TextForm showAlert={showAlert} heading="Enter the text to Analyze" mode={mode} /> 
+         <TextForm showAlert={showAlert} heading="All in One - Word Counter, Copy, Reverse & More" mode={mode} /> 
           </Route>
         </Switch>
        {/* <About/> */}
